@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.031 </x-m>
+      <y-m> -0.091 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.034 </x-m>
+      <y-m> -0.024 </y-m>
+      <z-m>  0.054 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.034 </x-m>
+      <y-m> 0.041 </y-m>
+      <z-m> 0.049 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/Interior/Panel/Instruments/airspeed/airspeed.xml</path>
+    <offsets>
+      <x-m>  0.030 </x-m>
+      <y-m> -0.083 </y-m>
+      <z-m> -0.015 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COMPASS -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.034 </x-m>
+      <y-m> -0.024 </y-m>
+      <z-m> -0.018 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.032 </x-m>
+      <y-m>  0.033 </y-m>
+      <z-m> -0.016 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

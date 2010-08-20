@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="p1101-jsbsim-cnf.xml"> -->
+<PropertyList include="p1101-yasim-cnf.xml">
+
+  <sim>
+    <description>Messerschmitt Me P1101</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+
