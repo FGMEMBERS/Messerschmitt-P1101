@@ -52,6 +52,10 @@
         <desc>Open/Close canopy</desc>
       </key>
       <key>
+        <name>E</name>
+        <desc>Wings 35 or 45 deg</desc>
+      </key>
+      <key>
         <name>e</name>
         <desc>Guns fire</desc>
       </key>

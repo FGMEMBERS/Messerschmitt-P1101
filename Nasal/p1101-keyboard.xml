@@ -2,6 +2,15 @@
 
 <PropertyList>
 
+  <key n="69">
+    <name>E</name>
+    <desc>Wings</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.wingsexport();</script>
+    </binding>
+  </key>
+
    <key n="68">
     <name>D</name>
     <desc>Passenger door</desc>

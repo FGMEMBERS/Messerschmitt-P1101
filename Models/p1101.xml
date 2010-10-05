@@ -16,7 +16,8 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
-    <object-name>ailes</object-name>
+    <object-name>ailesG</object-name>
+    <object-name>ailesD</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>voletG</object-name>
@@ -27,20 +28,24 @@
     <object-name>direction</object-name>
     <object-name>porteA1</object-name>
     <object-name>porteA2</object-name>
-    <object-name>axeA</object-name>
-    <object-name>roueA</object-name>
-    <object-name>axeG</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
-    <object-name>axeD</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>tourcockpit</object-name>
     <object-name>tourverriere</object-name>
+
     <object-name>intermoteur</object-name>
+    <object-name>axeA</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>guns</object-name>
     <object-name>trous</object-name>
+    <object-name>trousailesG</object-name>
+    <object-name>trousailesD</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -50,7 +55,8 @@
   <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
-    <object-name>ailes</object-name>
+    <object-name>ailesG</object-name>
+    <object-name>ailesD</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>voletG</object-name>
@@ -61,20 +67,24 @@
     <object-name>direction</object-name>
     <object-name>porteA1</object-name>
     <object-name>porteA2</object-name>
-    <object-name>axeA</object-name>
-    <object-name>roueA</object-name>
-    <object-name>axeG</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
-    <object-name>axeD</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>tourcockpit</object-name>
     <object-name>tourverriere</object-name>
+
     <object-name>intermoteur</object-name>
+    <object-name>axeA</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeG</object-name>
+    <object-name>roueG</object-name>
+    <object-name>axeD</object-name>
+    <object-name>roueD</object-name>
+    <object-name>guns</object-name>
     <object-name>trous</object-name>
+    <object-name>trousailesG</object-name>
+    <object-name>trousailesD</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -113,7 +123,8 @@
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
-    <object-name>ailes</object-name>
+    <object-name>ailesG</object-name>
+    <object-name>ailesD</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>voletG</object-name>
@@ -124,11 +135,8 @@
     <object-name>direction</object-name>
     <object-name>porteA1</object-name>
     <object-name>porteA2</object-name>
-    <object-name>axeA</object-name>
-    <object-name>axeG</object-name>
     <object-name>porteG1</object-name>
     <object-name>porteG2</object-name>
-    <object-name>axeD</object-name>
     <object-name>porteD1</object-name>
     <object-name>porteD2</object-name>
     <object-name>tourcockpit</object-name>
@@ -154,18 +162,7 @@
     <name>shadowOSG</name>
     <path>Aircraft/Messerschmitt-P1101/Models/shadow.xml</path>
   </model>
-<!--
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
--->
+
   <!-- Intérieur -->
   <model>
     <path>Aircraft/Messerschmitt-P1101/Models/Interior/interior.xml</path>
@@ -176,58 +173,172 @@
     </offsets>
   </model>
 
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 3.772 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 2.224 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Messerschmitt-P1101/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> -1.751 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.735 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LampeRouge</name>
+    <path>Aircraft/Messerschmitt-P1101/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  0.536 </x-m>
+      <y-m> -4.509 </y-m>
+      <z-m>  0.350 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LampeVerte</name>
+    <path>Aircraft/Messerschmitt-P1101/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> 0.536 </x-m>
+      <y-m> 4.509 </y-m>
+      <z-m> 0.350 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LampeGaucheBlanche</name>
+    <path>Aircraft/Messerschmitt-P1101/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m>  0.436 </x-m>
+      <y-m> -4.509 </y-m>
+      <z-m>  0.350 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LampeDroiteBlanche</name>
+    <path>Aircraft/Messerschmitt-P1101/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> 0.436 </x-m>
+      <y-m> 4.509 </y-m>
+      <z-m> 0.350 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Géométrie des ailes 35° ou 45° -->
+  <animation>
+    <name>AileGauche</name>
+    <object-name>ailesG</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG</object-name>
+    <object-name>LampeRouge</object-name>
+    <object-name>LampeGaucheBlanche</object-name>
+    <object-name>trousailesG</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileGauche</object-name>
+    <property>instrumentation/doors/wings/position-norm</property>
+    <factor> 9 </factor>
+    <center>
+      <x-m> -2.490 </x-m>
+      <y-m> -0.596 </y-m>
+      <z-m>  0.225 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>AileDroite</name>
+    <object-name>ailesD</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletD</object-name>
+    <object-name>LampeVerte</object-name>
+    <object-name>LampeDroiteBlanche</object-name>
+    <object-name>trousailesD</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileDroite</object-name>
+    <property>instrumentation/doors/wings/position-norm</property>
+    <factor> -9 </factor>
+    <center>
+      <x-m> -2.490 </x-m>
+      <y-m>  0.596 </y-m>
+      <z-m>  0.225 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
   <!-- Effets de tir -->
-  <!-- Gauche extérieur
+  <!-- Gauche haut -->
   <model>
     <path>Aircraft/Messerschmitt-P1101/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -5.552 </x-m>
-      <y-m>  0.222 </y-m>
-      <z-m> -0.411 </z-m>
+      <x-m> -3.163 </x-m>
+      <y-m> -0.576 </y-m>
+      <z-m>  0.073 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model> -->
+  </model>
 
-  <!-- Gauche milieu
+  <!-- Gauche bas -->
   <model>
     <path>Aircraft/Messerschmitt-P1101/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -5.770 </x-m>
-      <y-m>  0.136 </y-m>
-      <z-m> -0.463 </z-m>
+      <x-m> -3.942 </x-m>
+      <y-m> -0.432 </y-m>
+      <z-m> -0.185 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model> -->
+  </model>
 
-  <!-- Gauche intérieur
+  <!-- Droit bas -->
   <model>
     <path>Aircraft/Messerschmitt-P1101/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -5.799 </x-m>
-      <y-m>  0.008 </y-m>
-      <z-m> -0.416 </z-m>
+      <x-m> -3.942 </x-m>
+      <y-m>  0.432 </y-m>
+      <z-m> -0.185 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model> -->
+  </model>
 
-  <!-- Canon
+  <!-- Droit haut -->
   <model>
     <path>Aircraft/Messerschmitt-P1101/Models/Effects/guns/fire.xml</path>
     <offsets>
-      <x-m> -5.828 </x-m>
-      <y-m> -0.211 </y-m>
-      <z-m> -0.516 </z-m>
+      <x-m> -3.163 </x-m>
+      <y-m>  0.576 </y-m>
+      <z-m>  0.073 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Rotation des hélices des réacteurs -->
   <animation>
@@ -711,7 +822,56 @@
     <object-name>axeG</object-name>
   </animation>
 
+  <animation>  <!-- Géométrie des ailes 35° ou 45° -->
   <animation>
+    <name>AileGauche</name>
+    <object-name>ailesG</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>voletG</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileGauche</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> 9 </factor>
+    <center>
+      <x-m> -2.490 </x-m>
+      <y-m> -0.596 </y-m>
+      <z-m>  0.225 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>AileDroite</name>
+    <object-name>ailesD</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletD</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>AileDroite</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> -9 </factor>
+    <center>
+      <x-m> -2.490 </x-m>
+      <y-m>  0.596 </y-m>
+      <z-m>  0.225 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+
     <type>rotate</type>
     <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
@@ -818,61 +978,6 @@
       <z2-m> -1.078 </z2-m>
     </axis>
   </animation>
-
-  <!-- Ajout des effets lumineux -->
-  <model>
-    <path>Aircraft/Messerschmitt-P1101/Models/light/beacon.xml</path>
-    <offsets>
-      <x-m> 3.772 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 2.224 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Messerschmitt-P1101/Models/light/beacon.xml</path>
-    <offsets>
-      <x-m> -1.751 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.735 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Messerschmitt-P1101/Models/light/RedLight.xml</path>
-    <offsets>
-      <x-m>  0.536 </x-m>
-      <y-m> -4.509 </y-m>
-      <z-m>  0.350 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Messerschmitt-P1101/Models/light/GreenLight.xml</path>
-    <offsets>
-      <x-m> 0.536 </x-m>
-      <y-m> 4.509 </y-m>
-      <z-m> 0.350 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Messerschmitt-P1101/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  0.436 </x-m>
-      <y-m> -4.509 </y-m>
-      <z-m>  0.350 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Messerschmitt-P1101/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m> 0.436 </x-m>
-      <y-m> 4.509 </y-m>
-      <z-m> 0.350 </z-m>
-    </offsets>
-  </model>
 
   <!-- Canopy -->
   <animation>

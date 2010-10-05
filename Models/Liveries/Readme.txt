@@ -1,6 +1,6 @@
 default
 
-These liveries were made by : Emmanuel BARANGER 2010
+These liveries were made by : flier95 2010 ( http://flier95-flightgear.blogspot.com/ )
 
 Thanks to him.
 
