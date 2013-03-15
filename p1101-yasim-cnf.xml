@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList include="p1101-base.xml">
 
  <sim>
 
   <description>Messerschmitt Me P1101 (YASim)</description>
+  <author>Emmanuel BARANGER (3D/FDM)</author>
   <flight-model>yasim</flight-model>
   <aero>p1101-yasim</aero>
 
  </sim>
-
- <yasim>
-   <me262>
-     <pilot-lb>128</pilot-lb>
-   </me262>
- </yasim>
 
 </PropertyList>
 
