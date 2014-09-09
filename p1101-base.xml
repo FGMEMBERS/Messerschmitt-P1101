@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <description>Messerschmitt Me P1101 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>alpha</status>
+  
+    <fuel-fraction>1.0</fuel-fraction>
+  
+    <sound>
+      <audible>true</audible>
+      <path>Aircraft/Messerschmitt-P1101/Sounds/p1101-sound.xml</path>
+    </sound>
+
+    <startup>
+     <splash-texture>Aircraft/Messerschmitt-P1101/p1101-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/Messerschmitt-P1101/Models/p1101.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Messerschmitt-P1101/Models/Effects/guns/submodels.xml</path>
+    </submodels>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="6" alias="/engines/engine[0]/n1" />
+        <float n="8" alias="/controls/engines/engine[0]/throttle" />
+        <string n="0" type="string" />
+        <string n="9" type="string" />                                        <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Messerschmitt P1101</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Wings 35 or 45 deg</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Guns fire</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/p1101-menu.xml"/>
+
+  </sim>
+
+  <yasim>
+    <p1101>
+      <pilot-lb>128</pilot-lb>
+    </p1101>
+  </yasim>
+
+  <engines>
+    <engine n="0">
+      <engine-num type="int">0</engine-num>
+      <running>true</running>
+    </engine>
+    <engine n="1">
+      <engine-num type="int">1</engine-num>
+      <running>true</running>
+    </engine>
+  </engines>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <tank-num type="int">0</tank-num>
+        <level-gal_us archive="y">2070</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <controls>
+    <armament>
+     <trigger type="bool">false</trigger>
+     <master-arm type="bool">true</master-arm>
+     <position-norm type="int">1</position-norm>
+    </armament>
+  </controls>
+
+  <input>
+    <keyboard include="Nasal/p1101-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Messerschmitt-P1101/Nasal/doors.nas</file>
+    </doors>
+    <p1101>
+      <file>Aircraft/Messerschmitt-P1101/Nasal/liveries.nas</file>
+      <file>Aircraft/Messerschmitt-P1101/Nasal/light.nas</file>
+    </p1101>
+    <guns>
+      <file>Aircraft/Messerschmitt-P1101/Nasal/weapons.nas</file>
+      <file>Aircraft/Messerschmitt-P1101/Nasal/revi.nas</file>
+    </guns>
+  </nasal>
+
+</PropertyList>
+
