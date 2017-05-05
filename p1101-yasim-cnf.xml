@@ -9,6 +9,19 @@
   <flight-model>yasim</flight-model>
   <aero>p1101-yasim</aero>
 
+  <tags>
+    <tag>messerschmitt</tag>
+    <tag>high-wing</tag>
+    <tag>tricycle</tag>
+    <tag>retractable-gear</tag>
+    <tag>single-engine</tag>
+    <tag>jet</tag>
+    <tag>fighter</tag>
+    <tag>prototype</tag>
+    <tag>1940s</tag>
+    <tag>ww2</tag>
+  </tags>
+
  </sim>
 
 </PropertyList>
